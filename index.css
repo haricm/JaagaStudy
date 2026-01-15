@@ -1,16 +1,16 @@
-/* Jaaga Study - Orange & Blue Theme */
 :root {
-    --bg-color: #ffffff;
-    --text-color: #253F63;
-    /* Deep Blue */
-    --primary-color: #F35324;
-    /* Orange */
-    --secondary-color: #253F63;
-    /* Blue */
-    --card-bg: #f8fafc;
-    /* Light Grey */
+    --bg-color: #022c22;
+    --text-color: #ecfdf5;
+    --primary-color: #2dd4bf;
+    /* Teal */
+    --secondary-color: #fbbf24;
+    /* Gold */
+    --accent-color: #10b981;
+    /* Emerald */
+    --glass-bg: rgba(2, 44, 34, 0.7);
+    --glass-border: rgba(45, 212, 191, 0.2);
+    --card-bg: rgba(255, 255, 255, 0.03);
     --nav-height: 80px;
-    --border-color: #e2e8f0;
 }
 
 * {
