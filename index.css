@@ -479,18 +479,42 @@ footer {
     align-items: center;
 }
 
-.partner-logo {
-    height: 60px;
-    width: auto;
+.partner-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     opacity: 0.7;
     transition: all 0.3s ease;
     filter: grayscale(100%);
+    cursor: pointer;
 }
 
-.partner-logo:hover {
+.partner-item:hover {
     opacity: 1;
     filter: grayscale(0%);
     transform: scale(1.05);
+}
+
+.partner-logo {
+    height: 60px;
+    width: auto;
+    /* Removed individual opacity/filter as it's handled by parent now */
+}
+
+.partner-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+}
+
+/* Specific sizing if needed */
+.mars-logo {
+    height: 70px;
+}
+
+.eden-logo {
+    height: 45px;
 }
 
 /* Blog & Tags */
