@@ -28,25 +28,44 @@
         </div>
 
         <section class="container">
-            <div class="grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
-                <!-- Sample Post -->
-                <article class="card">
+            <!-- Tag Filter -->
+            <div class="tags-nav">
+                <button class="tag-btn active" onclick="filterPosts('all')">All</button>
+                <button class="tag-btn" onclick="filterPosts('news')">News</button>
+                <button class="tag-btn" onclick="filterPosts('philosophy')">Philosophy</button>
+                <button class="tag-btn" onclick="filterPosts('bootcamp')">Bootcamp</button>
+            </div>
+
+            <div class="grid" id="blog-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
+
+                <!-- Post 1 -->
+                <article class="card" data-tags="news bootcamp">
+                    <div style="margin-bottom: 0.5rem;">
+                        <span class="tag-pill">News</span>
+                        <span class="tag-pill">Bootcamp</span>
+                    </div>
                     <span class="meta">Jan 12, 2026</span>
                     <h3>Announcing Cohort 01</h3>
                     <p>We are thrilled to launch the first cohort of the Creative AI Bootcamp. This 9-week experiment
-                        brings together artists, coders, and dreamers to explore the edges of generative technology.</p>
-                    <a href="#" class="btn-outline" style="margin-left:0; padding: 0.5rem 1rem; font-size: 0.9rem;">Read
-                        More</a>
+                        brings together artists, coders, and dreamers.</p>
+                    <a href="blog/announcing-cohort-01.html" class="btn-outline"
+                        style="margin-left:0; padding: 0.5rem 1rem; font-size: 0.9rem;">Read More</a>
                 </article>
 
-                <article class="card">
+                <!-- Post 2 -->
+                <article class="card" data-tags="philosophy aesthetic">
+                    <div style="margin-bottom: 0.5rem;">
+                        <span class="tag-pill">Philosophy</span>
+                        <span class="tag-pill">Aesthetic</span>
+                    </div>
                     <span class="meta">Jan 10, 2026</span>
                     <h3>Why Solarpunk?</h3>
                     <p>In a world of dystopian narratives, we choose to build towards a future where technology and
                         nature coexist. Here is why our aesthetic matters.</p>
-                    <a href="#" class="btn-outline" style="margin-left:0; padding: 0.5rem 1rem; font-size: 0.9rem;">Read
-                        More</a>
+                    <a href="blog/why-solarpunk.html" class="btn-outline"
+                        style="margin-left:0; padding: 0.5rem 1rem; font-size: 0.9rem;">Read More</a>
                 </article>
+
             </div>
         </section>
     </main>
@@ -54,6 +73,26 @@
     <footer>
         <p class="copyright">&copy; 2026 Jaaga Study. Built with Hope.</p>
     </footer>
+
+    <script>
+        function filterPosts(tag) {
+            // Update active button
+            const buttons = document.querySelectorAll('.tag-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Filter posts
+            const posts = document.querySelectorAll('.card[data-tags]');
+            posts.forEach(post => {
+                const tags = post.getAttribute('data-tags').split(' ');
+                if (tag === 'all' || tags.includes(tag)) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
