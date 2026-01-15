@@ -483,15 +483,15 @@ footer {
     display: flex;
     align-items: center;
     gap: 1rem;
-    opacity: 0.7;
+    opacity: 0.9;
+    /* Increased opacity */
     transition: all 0.3s ease;
-    filter: grayscale(100%);
+    /* Removed filter: grayscale(100%); to keep original colors */
     cursor: pointer;
 }
 
 .partner-item:hover {
     opacity: 1;
-    filter: grayscale(0%);
     transform: scale(1.05);
 }
 
@@ -502,7 +502,8 @@ footer {
 }
 
 .partner-text {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
+    /* Increased from 1.5rem to be > half of 70px logo */
     font-weight: 600;
     color: var(--text-color);
     letter-spacing: 0.5px;
