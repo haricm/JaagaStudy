@@ -162,7 +162,11 @@ main {
     position: relative;
     padding: 4rem 2rem;
     background: var(--bg-color);
-    /* Deep Blue */
+    background-image: url('images/hero-cinematic-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Deep Blue Fallback */
     overflow: hidden;
 }
 
@@ -205,7 +209,11 @@ main {
     padding: 6rem 2rem 4rem;
     text-align: center;
     background: var(--bg-color);
-    /* Deep Blue */
+    background-image: url('images/hero-cinematic-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Deep Blue Fallback */
 }
 
 /* Buttons */
