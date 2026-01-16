@@ -1,0 +1,4 @@
+- [ ] Restoring Nested Bootcamp URL Structure
+    - [ ] Create directory and move 01.html
+    - [ ] Update relative paths with correct depth (../../)
+    - [ ] Update incoming links in index/blog/resources
