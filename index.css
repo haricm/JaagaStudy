@@ -691,9 +691,9 @@ footer {
 }
 
 .light-section .timeline-date {
-    background: rgba(243, 83, 36, 0.1);
-    /* Orange Tint */
-    color: var(--primary-color);
+    background: #2EC4B6;
+    /* Teal Highlight */
+    color: white;
     border: none;
 }
 
