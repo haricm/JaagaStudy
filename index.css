@@ -172,12 +172,10 @@ main {
 
 .hero-content {
     max-width: 800px;
-    background: rgba(2, 44, 34, 0.6);
+    position: relative;
+    z-index: 2;
     padding: 3rem;
-    border-radius: 24px;
-    backdrop-filter: blur(8px);
-    border: 1px solid var(--glass-border);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
     animation: fadeUp 1s ease-out;
 }
 
@@ -631,4 +629,76 @@ footer {
     .article-content {
         padding: 1.5rem;
     }
+}
+
+/* Hybrid Theme - Light Sections */
+.light-section {
+    background-color: #F4EFEA;
+    color: #022c22;
+    /* Dark Green Text */
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.light-section h2 {
+    color: #022c22;
+    /* Dark Green Heading */
+}
+
+.light-section h3 {
+    color: #10b981;
+    /* Emerald/Teal for subheadings */
+}
+
+.light-section p,
+.light-section li {
+    color: #334155;
+    /* Slate 700 for readability */
+}
+
+.light-section .card {
+    background: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    backdrop-filter: none;
+}
+
+.light-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-color: #10b981;
+}
+
+.light-section .card p {
+    color: #475569;
+}
+
+.light-section .timeline-content {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.light-section .timeline-date {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+    border: none;
+}
+
+.light-section .partner-text {
+    color: #022c22;
+}
+
+/* Adjust timeline line color for light bg */
+.light-section .timeline::after {
+    background-color: #cbd5e1;
+}
+
+.light-section .left::before {
+    border-color: transparent transparent transparent #e2e8f0;
+}
+
+.light-section .right::before {
+    border-color: transparent #e2e8f0 transparent transparent;
 }
