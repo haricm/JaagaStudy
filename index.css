@@ -691,14 +691,19 @@ footer {
 }
 
 .light-section .timeline-date {
-    background: #2EC4B6;
+    background: #2EC4B6 !important;
     /* Teal Highlight */
-    color: white;
+    color: white !important;
     border: none;
 }
 
 .light-section .partner-text {
     color: var(--text-dark);
+}
+
+.light-section .eden-logo {
+    /* Filter to convert to #253F63 */
+    filter: brightness(0) saturate(100%) invert(20%) sepia(12%) saturate(3082%) hue-rotate(183deg) brightness(97%) contrast(92%);
 }
 
 /* Footer override to ensure it stays dark */
