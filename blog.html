@@ -13,9 +13,10 @@ title: Blog | jaagastudy
         <!-- Tag Filter -->
         <div class="tags-nav">
             <button class="tag-btn active" onclick="filterPosts('all')">All</button>
-            <button class="tag-btn" onclick="filterPosts('announcement')">Announcement</button>
-            <button class="tag-btn" onclick="filterPosts('philosophy')">Philosophy</button>
-            <button class="tag-btn" onclick="filterPosts('bootcamp')">Bootcamp</button>
+            {% assign sorted_tags = site.tags | sort %}
+            {% for tag in sorted_tags %}
+            <button class="tag-btn" onclick="filterPosts('{{ tag[0] | downcase }}')">{{ tag[0] | capitalize }}</button>
+            {% endfor %}
         </div>
 
         <div class="grid" id="blog-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
